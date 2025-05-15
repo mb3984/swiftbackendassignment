@@ -22,4 +22,4 @@ app.listen(port, () => {
   console.log(`Server Running at http://localhost:${port}`);
 });
 
-app.get("/", (req, res) => res.send("Welcome backend Project!"));
+app.get("/", (req, res) => res.send("Welcome to backend Project!"));
