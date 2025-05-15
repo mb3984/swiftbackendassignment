@@ -1,0 +1,87 @@
+GET http://localhost:3100/load
+
+### 
+PUT http://localhost:3100/users
+Content-Type: application/json
+
+{
+  "id": 11,
+  "name": "madhu",
+  "username": "testuser",
+  "email": "test@example.com",
+  "address": {
+    "street": "Test St",
+    "suite": "Apt. 123",
+    "city": "Testville",
+    "zipcode": "12345",
+    "geo": {
+      "lat": "0.0000",
+      "lng": "0.0000"
+    }
+  },
+  "phone": "123-456-7890",
+  "website": "test.com",
+  "company": {
+    "name": "Test Co",
+    "catchPhrase": "Testing stuff",
+    "bs": "test bs"
+  },
+  "posts": [
+    {
+      "id": 9001,
+      "userId": 1001,
+      "title": "Test Post 1",
+      "body": "This is the first test post body.",
+      "comments": [
+        {
+          "id": 8001,
+          "postId": 9001,
+          "name": "Commenter One",
+          "email": "comment1@test.com",
+          "body": "Nice post!"
+        },
+        {
+          "id": 8002,
+          "postId": 9001,
+          "name": "Commenter Two",
+          "email": "comment2@test.com",
+          "body": "Thanks for sharing."
+        }
+      ]
+    },
+    {
+      "id": 9002,
+      "userId": 1001,
+      "title": "Test Post 2",
+      "body": "This is the second test post body.",
+      "comments": [
+        {
+          "id": 8003,
+          "postId": 9002,
+          "name": "Commenter Three",
+          "email": "comment3@test.com",
+          "body": "Interesting read."
+        }
+      ]
+    }
+  ]
+}
+
+### 
+GET http://localhost:3100/users/5
+
+
+### 
+DELETE http://localhost:3100/users/10
+
+### 
+DELETE http://localhost:3100/users
+
+###
+GET http://localhost:3100/all-users
+
+###
+GET http://localhost:3100/posts
+
+###
+GET http://localhost:3100/comments
